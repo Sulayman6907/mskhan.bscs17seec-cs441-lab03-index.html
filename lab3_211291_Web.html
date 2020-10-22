@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- jQuery first, then Popper.js and Bootstrap JS. -->
+		<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+			
+
+		</script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+		 <style>
+        .divClass {
+            font-size: 16px;
+            background-color: #E3E3E3;
+            width: 500px;
+            padding: 5px;
+        }
+    	</style>
+    	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  
+		<script>
+		$(document).ready(function() {
+		$("#toggle-btn").click(function(){
+        $("#divClass").toggle(); 
+        });
+        $("#even").click(function(){
+        $("#Task-5 p:nth-of-type(even)").css("background-color", "yellow");
+        }); 
+        $("#odd").click(function(){
+        $("#Task-5 p:nth-of-type(odd)").css("background-color", "yellow");
+        }); 
+
+         $("#n").click(function(){
+        var n =prompt("Enter the paragrapgh no");
+        switch (n){
+        	case '1':
+        	$("#Task-5 p:nth-of-type(1)").css("background-color", "yellow");
+        	break;
+        	case '2':
+        	$("#Task-5 p:nth-of-type(2)").css("background-color", "yellow");
+        	break;
+        	case '3':
+        	$("#Task-5 p:nth-of-type(3)").css("background-color", "yellow");
+        	break;
+        	case '4':
+        	$("#Task-5 p:nth-of-type(4)").css("background-color", "yellow");
+        	break;
+        	case '5':
+        	$("#Task-5 p:nth-of-type(5)").css("background-color", "yellow");
+        	break;
+        	case '6':
+        	$("#Task-5 p:nth-of-type(6)").css("background-color", "yellow");
+        	break;
+        }
+        
+        }); 
+
+
+		  var $speech = $('#divClass');
+		  var defaultSize = $speech.css('fontSize');
+		  $('#switcher button').click(function() {
+		    var num = parseFloat($speech.css('fontSize'));
+		    switch (this.id) {
+		      case 'switcher-large':
+		        num *= 1.1;
+		        break;
+		      case 'switcher-small':
+		        num /= 1.1;
+		        break;
+		      default:
+		        num = parseFloat(defaultSize);
+		    }
+		    $speech.css('fontSize', num + 'px');
+		  });
+		});
+		</script> 
+		<script type="text/javascript">
+
+			
+			function addNumbers(){
+				var y= 0;
+				while (x!=0){
+				var x = prompt("Enter the numbers to add");	
+				var y= Number(x)+Number(y);
+				}
+				alert("The Sum is " + y);
+			}
+
+			function msgcheck(){
+				
+				var x = prompt("What is my name? Hint: Sulayman");	
+				if (x=="Sulayman"){
+					alert("You got that right :)");
+				}
+				else{
+					alert("404. Wrong answer :(");	
+				}
+				
+			}
+
+			function msgprint(){
+				var z = 0;
+				var x = prompt("Enter the message you want to show.");	
+				var y = Number(prompt("Enter the no of times you want to show"));
+				while(z < y){
+				var para = document.createElement("p");
+				var node = document.createTextNode(x);
+				para.appendChild(node);
+
+				var element = document.getElementById("rep");
+				var child = document.getElementById("rep-child");
+				element.insertBefore(para,child);
+				z++;	
+				}	
+				
+				
+			}
+
+			
+			
+		</script>
+		<title>Muhammad Sulayman - Lab 2</title>
+		
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container text-center">
+				<h1 class="display-3">Lab no 3 </h1>
+				<p class="lead"> <b>Muhammad Sulayman Khan | Lab no 3 | 211291</b> </p>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+
+								
+					<div class="col-md-12">
+					
+					<h2 align="text-center">Task no 1</h2>
+					<p id="1">Click the following button to perform Task no 1</p>  
+					<input type = "button" onclick = "addNumbers()" value = "Display">
+					</div>
+
+					<div class="col-md-12">
+					
+					<h2 align="text-center">Task no 2</h2>
+					<p id="1">Click the following button to perform Task no 2</p>  
+					<input type = "button" onclick = "msgcheck()" value = "Display">
+					</div>
+
+					<div class="col-md-12" id="rep">
+					
+					<h2 align="text-center">Task no 3</h2>
+					<p id="1">Click the following button to perform Task no 2</p>  
+					<p id="rep-child"></p>
+					<input type = "button" onclick = "msgprint()" value = "Display">
+					</div>
+
+					<div class="col-md-12" >
+					
+					 <div id="switcher">
+					 	<h2 align="text-center">Task no 4</h2>
+					       	<p id="divClass">Paragraphs are the building blocks of papers. Many students define paragraphs in terms of length: a paragraph is a group of at least five sentences, a paragraph is half a page long, etc. In reality, though, the unity and coherence of ideas among sentences is what constitutes a paragraph. A paragraph is defined as “a group of sentences or a single sentence that forms a unit” (Lunsford and Connors 116). Length and appearance do not determine whether a section in a paper is a paragraph. For instance, in some styles of writing, particularly journalistic styles, a paragraph can be just one sentence long. Ultimately, a paragraph is a sentence or group of sentences that support one main idea. In this handout, we will refer to this as the “controlling idea,” because it controls what happens in the rest of the paragraph.</p>
+							<button id="switcher-default">Default</button>
+							<button id="switcher-large">Bigger Font</button>
+							<button id="switcher-small">Smaller Font</button>
+							<button id="toggle-btn">hide/ show text</button>
+					</div>
+
+					<div id="Task-5">
+					<h2 align="text-center">Task no 5</h2>	
+
+					<div style="border:1px solid;">
+					<span>This is a span element in div</span>
+					<p>The first paragraph in div.</p>
+					<p>The second paragraph in another div.</p>
+					<p>The third paragraph in div.</p>
+					<p>The fourth paragraph in div.</p>
+					<p>The fifth paragraph in div.</p>
+					<p>The sixth paragraph in div.</p>
+					<p>The seventh paragraph in div.</p>
+					<button id="even">Select Even</button>
+					<button id="odd">Select odd</button>
+					<button id="n">choose the paragrapgh no</button>
+
+					</div>
+
+
+		</div>
+		
+	</body>
+</html>
